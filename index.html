@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+				<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+				<link rel="stylesheet" href="styles/style.css"/>
+				<title>Expense</title>
+</head>
+<body>
+				<div class="expense-app">
+    <h2>Expense Tracker</h2>
+    
+    <input type="text" id="name-input" placeholder="What did you buy?">
+    <input type="number" id="amount-input" placeholder="Amount ($)">
+    <button id="add-btn">Add Expense</button>
+
+    <div class="display-box">
+        <h3>Total Spent: $<span id="total-amount">0</span></h3>
+        <button id="filter-btn">Show > $10 Only</button>
+        <ul id="expense-list"></ul>
+    </div>
+</div>
+</body>
+</html>
