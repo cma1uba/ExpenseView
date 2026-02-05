@@ -32,3 +32,14 @@ function updateUI() {
     expenses.forEach(item => total += item.price);
     totalDisplay.textContent = total;
 }
+
+const filterBtn = document.getElementById("filter-btn");
+
+filterBtn.addEventListener("click", () => {
+    
+    const bigExpenses = expenses.filter(item => item.price >= 10);
+    
+    expenseList.innerHTML = bigExpenses.map(item => `
+        <li>${item.name}: $${item.price}</li>
+    `).join("");
+});
