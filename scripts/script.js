@@ -31,7 +31,7 @@ function updateUI() {
     let total = 0;
     expenses.forEach(item => total += item.price);
     totalDisplay.textContent = total;
-}
+};
 
 const filterBtn = document.getElementById("filter-btn");
 
@@ -42,8 +42,17 @@ filterBtn.addEventListener("click", () => {
     expenseList.innerHTML = bigExpenses.map(item => `
         <li>${item.name}: $${item.price}</li>
     `).join("");
-
+    
     let total = 0;
     bigExpenses.forEach(item => total += item.price);
     totalDisplay.textContent = total;
+    
+});
+
+const clearBtn = document.getElementById("clear-btn");
+
+clearBtn.addEventListener("click", ()=>{
+    expenses = [];
+    localStorage.removeItem("expense");
+    updateUI();
 });
